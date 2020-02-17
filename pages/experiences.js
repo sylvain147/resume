@@ -1,6 +1,6 @@
 import Experience from '../components/Experience'
 
-export default function Index() {
+export default function experience() {
   return (
     <div>
      {getExperiences().map(experience => (
