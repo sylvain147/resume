@@ -1,13 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/styles';
 import { withRouter } from 'next/router'
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
-
-
-
 
 const styles = theme => ({
   navbar : {

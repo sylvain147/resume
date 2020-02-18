@@ -36,10 +36,12 @@ function getPersonnals() {
 			title : 'Rougetube',
 			links : [
 				{
+					id:'100',
 					name : 'Github frontend',
 					link : 'https://github.com/sylvain147/project-front'
 				},
 				{
+					id:'100',
 					name : 'Github backend',
 					link : 'https://github.com/sylvain147/project-api]'
 				}
@@ -68,6 +70,7 @@ Commentaries.`
 			title : 'Messenger datas',
 			links : [
 				{
+					id:'101',
 					name : 'Github',
 					link : 'https://github.com/sylvain147/project-messages'
 				}
@@ -82,6 +85,7 @@ Using the Json data. I then used an external tool to create graphs using the tre
 			title : 'Online Resume',
 			links : [
 				{
+					id:'105',
 					name : 'Github',
 					link : 'https://github.com/sylvain147/resume'
 				}
@@ -103,6 +107,7 @@ function getProfessional() {
 		company : 'Mandarine Academy',
 		links : [
 			{
+				id:'110',
 				name : 'website',
 				link : 'https://mooc.office365-training.com/'
 			}
@@ -117,6 +122,7 @@ function getProfessional() {
 		company : 'Mandarine Academy',
 		links : [
 			{
+				id:'111',
 				name : 'website',
 				link : 'https://mooc.office365-training.com/'
 			}
@@ -132,6 +138,7 @@ function getProfessional() {
 		company : 'Rubee company',
 		links : [
 			{
+				id:'120',
 				name : 'website',
 				link : 'https://mooc.office365-training.com/'
 			}
