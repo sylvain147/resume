@@ -45,6 +45,9 @@ class Header extends React.Component {
         <Link href="/skills">
             <a className={`${classes.NavLink} ${this.props.router.pathname == '/skills' ? classes.NavLink.selected : ''}`}  >skills</a>
         </Link>
+        <Link href="/realisations">
+            <a className={`${classes.NavLink} ${this.props.router.pathname == '/realisations' ? classes.NavLink.selected : ''}`}  >Realisations</a>
+        </Link>
       </div>
       </div>
       );

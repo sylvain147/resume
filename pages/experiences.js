@@ -80,8 +80,8 @@ Integration of elasticsearch : Adaptation on the symfony model and optimization 
 </li>
 </ul>
 <span style='text-decoration:underline '>Technical environment​ </span>: MacOs / Prestashop - MySql
-<ul><li>Integration of elasticsearch: Integration to prestashop and UX</li></ul>
-design.`
+<ul><li>Integration of elasticsearch: Integration to prestashop and UX design.</li></ul>
+`
     }
 
   ]
