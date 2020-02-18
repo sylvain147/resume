@@ -25,13 +25,14 @@ const styles = theme => ({
   },
   icon : {
     transition : '300ms',
-    cursor : 'pointer',
     fontSize : '20px',
     color : '#5162ad'
   },
   presentation : {
     display : 'flex',
-    justifyContent : 'space-between'
+    justifyContent : 'space-between',
+        cursor : 'pointer',
+
   }
 })
 class Experience extends React.Component {
@@ -51,13 +52,13 @@ class Experience extends React.Component {
     const experience = this.state.experience
     return (
      <div className={classes.experience}>
-        <div className={classes.presentation}>
+        <div className={classes.presentation}  onClick={this.showDescription.bind(this)}>
           <div>
             <span  className={classes.company}>{experience.company}</span>, <span>{experience.location}</span> - <span className={classes.title}>{experience.title}</span>
             <p className={classes.date}>{experience.date}</p>
           </div>
           <div>
-            <span onClick={this.showDescription.bind(this)}><FaChevronRight className={classes.icon} style={{transform : this.state.shown ? 'rotate(90deg)' : 'rotate(0deg)'}} /></span>
+            <span><FaChevronRight className={classes.icon} style={{transform : this.state.shown ? 'rotate(90deg)' : 'rotate(0deg)'}} /></span>
           </div>
         </div>
       <div className={classes.description} style={{height : this.state.shown ? '500px' : '0px', overflow : 'hidden' }} dangerouslySetInnerHTML={{__html: experience.description}} ></div>

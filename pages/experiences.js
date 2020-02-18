@@ -65,7 +65,24 @@ Supported the recruitment process of student interns.
       company : 'Rubee Company', 
       date : 'April 2017 - December 2017', 
       location: 'France' , 
-      description : 'stuff'}
+      description : `
+<p> 
+As the only full-time developer at e-commerce company Rubee Company, my main aims were to ensure continuity throughout our work as well as maintain the functionality and redevelopment of the back office for the company as a whole.
+</p>
+<span style='text-decoration:underline '>Technical environment​</span>: MacOS / symfony 2.8 - vueJs - MySql (doctrine) - Vagrant
+</span>
+<ul>
+<li>
+Back-office Improvement and maintenance.
+</li>
+<li>
+Integration of elasticsearch : Adaptation on the symfony model and optimization of the search engine.
+</li>
+</ul>
+<span style='text-decoration:underline '>Technical environment​ </span>: MacOs / Prestashop - MySql
+<ul><li>Integration of elasticsearch: Integration to prestashop and UX</li></ul>
+design.`
+    }
 
   ]
 }
