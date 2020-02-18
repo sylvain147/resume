@@ -32,7 +32,7 @@ export default function Index() {
           </span> and looking for a job in New York City
       </p>
       <p>
-        I am Passionate about computer science and new technologies.
+        I am passionate about computer science and new technologies
       </p>
        <p>
         Working as a <span className={classes.important}>

@@ -13,7 +13,14 @@ const styles = theme => ({
   navbar : {
 		display : 'flex',
 		justifyContent: 'center',
-		marginBottom : "30px"
+		marginBottom : "30px",
+		position : 'fixed',
+		top : '0',
+		left : '0',
+		right : '0',
+		backgroundColor : '#fff',
+		zIndex : '99',
+		boxShadow : '0 10px 19px -14px #5162ad'
 	},
 	NavLink : {
 		margin : '15px 20px',

@@ -43,7 +43,7 @@ class Realisation extends React.Component {
 					<span className={classes.title}>{real.title} </span> 
 					<p style={{margin:'0'}}>
 						{real.technologies.map(tech => (
-							<span style={{fontSize : '13px'}}> {tech+' -'}</span> 
+							<span key={real.id} style={{fontSize : '13px'}}> {tech+' -'}</span> 
          				 
         				))}
         			</p>
