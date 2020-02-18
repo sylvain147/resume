@@ -2,7 +2,7 @@ import Skill from '../components/Skill'
 class skills extends React.Component  {
 	render () {
 		return(
-		<div style={{display:'flex', justifyContent:'space-around', flexWrap : 'wrap', marginTop : '60px' }}>
+		<div style={{display:'flex', justifyContent:'space-around', flexWrap : 'wrap' }}>
      		{getSkills().map(skill => (
           		<Skill key={skill.id} skill={skill} />
        		 ))}

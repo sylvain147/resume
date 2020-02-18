@@ -4,20 +4,23 @@ import { FaChevronRight } from 'react-icons/fa';
 
 const styles = theme => ({
   company : {
-    textTransform : 'uppercase',
-    fontWeight : 'bold',
-    color : '#5162ad'
+    fontSize : '25px',
+    marginBottom : '0px',
+    marginTop :'0'    
   },
   title : {
-    fontStyle : 'italic'
+    fontStyle : 'italic',
+    color : '#5162ad',
+    fontWeight : 'bold'
   },
   date : {
-    margin : '0',
+    margin : '0 0 12px 0',
     fontSize : '13px'
   },
   experience : {
     marginBottom : "60px",
-    marginTop : "60px"
+    boxShadow : '0px 0px 8px -2px',
+    padding : '30px 30px 30px 20px'
   },
   description : {
     overflow : 'hidden',
@@ -30,6 +33,7 @@ const styles = theme => ({
   },
   presentation : {
     display : 'flex',
+    alignItems : 'center',
     justifyContent : 'space-between',
         cursor : 'pointer',
 
@@ -54,7 +58,8 @@ class Experience extends React.Component {
      <div className={classes.experience}>
         <div className={classes.presentation}  onClick={this.showDescription.bind(this)}>
           <div>
-            <span  className={classes.company}>{experience.company}</span>, <span>{experience.location}</span> - <span className={classes.title}>{experience.title}</span>
+            <h2  className={classes.company}>{experience.company}</h2> 
+            <span className={classes.title}>{experience.title}</span>
             <p className={classes.date}>{experience.date}</p>
           </div>
           <div>

@@ -2,9 +2,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/styles';
 
 const styles = theme => ({
-  education : {
-    marginTop : '60px'
-  },
   school : {
     textTransform : 'uppercase',
     fontWeight : 'bold',

@@ -8,10 +8,13 @@ const style = theme => ({
 		maxWidth : '200px'
 	},
 	title : {
-		margin : '5px 10px 3px 0px',
+		margin: '5px 10px 3px 0px',
+    	fontWeight: 'bold',
+    	fontSize: '19px'
 	},
 	skill : {
-		margin : '30px 5px'
+		margin : '0px 0px 30px 0px',
+		width : '205px'
 	}
 		
 })

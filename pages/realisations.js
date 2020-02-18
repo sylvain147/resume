@@ -9,7 +9,7 @@ const useStyles = makeStyles({
 export default function Realisations() {
 	const classes = useStyles()
 	return (
-		<div style={{display : 'flex', justifyContent : 'space-between', marginTop : '60px'}}>
+		<div style={{display : 'flex', justifyContent : 'space-between'}}>
 			<div className={classes.part}>
 				<h2>Personnal</h2>
 				<div>
