@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { withStyles } from '@material-ui/styles';
+import { FaChevronRight } from 'react-icons/fa';
+
 
 const styles = theme => ({
 	title : {
@@ -12,7 +14,12 @@ const styles = theme => ({
 		marginBottom : "50px",
 		padding : '14px 20px 25px 21px',
 		cursor : 'pointer',
-	}
+	},
+	icon : {
+    	transition : '400ms',
+    	fontSize : '20px',
+    	color : '#5162ad'
+  },
 })
 class Realisation extends React.Component {
 	constructor (props) {
@@ -31,22 +38,29 @@ class Realisation extends React.Component {
 		return (
 		<div className={classes.tile} onClick={this.handleClick.bind(this)}>
 			<p style={{marginBottom : "2px"}}>
-				<span className={classes.title}>{real.title} </span> 
-				<p style={{margin:'0'}}>
-					{real.technologies.map(tech => (
-						<span style={{fontSize : '13px'}}> {tech+' -'}</span> 
+			<div style={{display : 'flex', justifyContent : 'space-between', alignItems : 'center'}}>
+				<div>
+					<span className={classes.title}>{real.title} </span> 
+					<p style={{margin:'0'}}>
+						{real.technologies.map(tech => (
+							<span style={{fontSize : '13px'}}> {tech+' -'}</span> 
          				 
-        			))}
+        				))}
         			</p>
+        		</div>
+        		<div>
+        			<FaChevronRight className={classes.icon} style={{transform : this.state.open ? 'rotate(90deg)' : 'rotate(0deg)'}} />
+        		</div>
+        	</div>
 						
 			</p>
 			
-			<div style={{ maxHeight : this.state.open ? '1000px' : '0px', overflow : 'hidden', transition : '600ms' }}>
+			<div style={{ maxHeight : this.state.open ? '500px' : '0px', overflow : 'hidden', transition : '600ms' }}>
 			<div  style={{marginTop : '10px'}}>
 			{real.links.map(link => (
 				<div key={link.id}style={{marginRight : '10px'}}>
-				<Link href={link.link}>	
-				<a>{link.name}</a></Link>
+				<Link href={link.link} target='_blank'>	
+				<a target='_blank'>{link.name}</a></Link>
 				</div>
          				 
         			))}

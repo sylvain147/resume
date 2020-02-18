@@ -3,13 +3,12 @@ import { withStyles } from '@material-ui/styles';
 
 const styles = theme => ({
   school : {
-    textTransform : 'uppercase',
-    fontWeight : 'bold',
     color : '#5162ad',
     margin : '0',
+    fontStyle :'italic',
+    fontWeight : 'bold',
   },
   description : {
-    fontStyle : 'italic',
     margin : '0',
   },
   date : {
@@ -30,9 +29,9 @@ class Education extends React.Component {
     return (
      <div className={classes.education}>
           <div>
-            <span  className={classes.school}>{education.school}</span>, <span>{education.location}</span> 
-            <p className={classes.description}>{education.description}</p>
-            <p className={classes.date}>{education.date}</p>
+          <h2 className={classes.description}>{education.description}</h2>
+          <p style={{margin : '0'}}><span className={classes.school}>{education.school}</span>, <span  className={classes.location}>{education.location}</span> </p>
+           <p className={classes.date}>{education.date}</p>
           </div>
     </div>
     )

@@ -14,6 +14,11 @@ const styles = theme => ({
     fontWeight : 'bold'
   },
   date : {
+    margin : '0',
+    fontSize : '13px'
+  },
+
+  location : {
     margin : '0 0 12px 0',
     fontSize : '13px'
   },
@@ -27,7 +32,7 @@ const styles = theme => ({
     transition : '400ms'
   },
   icon : {
-    transition : '300ms',
+    transition : '600ms',
     fontSize : '20px',
     color : '#5162ad'
   },
@@ -61,12 +66,13 @@ class Experience extends React.Component {
             <h2  className={classes.company}>{experience.company}</h2> 
             <span className={classes.title}>{experience.title}</span>
             <p className={classes.date}>{experience.date}</p>
+            <p className={classes.location}>{experience.location}</p>
           </div>
           <div>
             <span><FaChevronRight className={classes.icon} style={{transform : this.state.shown ? 'rotate(90deg)' : 'rotate(0deg)'}} /></span>
           </div>
         </div>
-      <div className={classes.description} style={{height : this.state.shown ? '500px' : '0px', overflow : 'hidden' }} dangerouslySetInnerHTML={{__html: experience.description}} ></div>
+      <div className={classes.description} style={{maxHeight : this.state.shown ? '1000px' : '0px', overflow : 'hidden' }} dangerouslySetInnerHTML={{__html: experience.description}} ></div>
     </div>
     )
   }

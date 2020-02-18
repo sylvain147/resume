@@ -27,7 +27,8 @@ const styles = theme => ({
 		},
 		'&:hover' : {
 			color : '#5162ad',
-			padding : '0 38px 4px'
+			padding : '0 38px 4px',
+			fontWeight : 'bold'
 		},
 	},
 	icons : {
@@ -48,7 +49,6 @@ const styles = theme => ({
 class Header extends React.Component {
 	render () {
 		const classes  = this.props.classes;
-
 		return (
 		<div>
       <div className={classes.navbar}>
@@ -63,10 +63,6 @@ class Header extends React.Component {
         </Link>
         <Link href="/skills">
             <a className={`${classes.NavLink} ${this.props.router.pathname == '/skills' ? classes.NavLink.selected : ''}`}  >Skills</a>
-        </Link>
-
-        <Link href="/contact">
-            <a className={`${classes.NavLink} ${this.props.router.pathname == '/contact' ? classes.NavLink.selected : ''}`}  >Contact</a>
         </Link>
         <div className={classes.icons}>
               <a href="https://github.com/sylvain147" target="_blank">
