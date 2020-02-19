@@ -32,7 +32,7 @@ export default class MyApp extends App {
           <CssBaseline />
            <div style={{color: '#5f5f5f', fontFamily : 'sans-serif'}}>
   			<Header />
-  			<div style={{maxWidth : '800px', marginRight : 'auto',marginLeft : 'auto', height : '100%', marginTop : '120px', marginBottom : '160px'}}>
+  			<div style={{paddingLeft:'10px', paddingRight : '10px',maxWidth : '800px', marginRight : 'auto',marginLeft : 'auto', height : '100%', marginTop : '120px', marginBottom : '160px'}}>
  			 <Component {...pageProps} />
   			</div>
   			<Footer />

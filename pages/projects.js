@@ -1,4 +1,4 @@
-import Realisation from '../components/Realisation'
+import Project from '../components/Project'
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   part: {
@@ -6,23 +6,23 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Realisations() {
+export default function Projects() {
 	const classes = useStyles()
 	return (
 		<div style={{display : 'flex', justifyContent : 'space-between'}}>
 			<div className={classes.part}>
 				<h2 style={{fontSize : '25px'}} >Personnal</h2>
 				<div>
-					{getPersonnals().map(realisation => (
-         				 <Realisation key={realisation.id} realisation={realisation} />
+					{getPersonnals().map(project => (
+         				 <Project key={project.id} project={project} />
         			))}
         		</div>
 			</div>
 			<div className={classes.part}>
 				<h2 style={{fontSize : '25px'}}>Professionnal</h2>
 				<div>
-					{getProfessional().map(realisation => (
-         				 <Realisation key={realisation.id} realisation={realisation} />
+					{getProfessional().map(project => (
+         				 <Project key={project.id} project={project} />
         			))}
         		</div>
 			</div>

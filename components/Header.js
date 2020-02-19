@@ -16,10 +16,15 @@ const styles = theme => ({
 		right : '0',
 		backgroundColor : '#fff',
 		zIndex : '99',
-		boxShadow : '0 10px 19px -14px #5162ad'
+		boxShadow : '0 10px 19px -14px #5162ad',
+		['@media (max-width:730px)']: {
+      		flexWrap : 'wrap',
+      		marginBottom : "130px",
+    	},
+
 	},
 	NavLink : {
-		margin : '15px 20px',
+		margin : '15px 10px',
 		textDecoration : 'none',
 		borderBottom : '1px solid ',
 		padding : "0 15px 4px",
@@ -27,21 +32,24 @@ const styles = theme => ({
 		transition : '400ms',
 		'&:hover' : {
 			color : '#5162ad',
-			padding : '0 38px 4px',
+			padding : '0 25px 4px',
 			fontWeight : 'bold',
 			borderBottom : '2px solid'
 		},
 	},
 	selected : {
 		color : '#5162ad',
-			padding : '0 38px 4px',
+			padding : '0 25px 4px',
 			fontWeight : 'bold',
 			borderBottom : '2px solid'
 	},
 	icons : {
 		position : 'absolute',
 		right : "15px",
-		top : '20px'
+		top : '20px',
+		['@media (max-width:730px)']: {
+      		display : 'none',
+    	},
 	},
 	icon : {
 		fontSize : '25px',
@@ -71,6 +79,9 @@ class Header extends React.Component {
         </Link>
         <Link href="/skills">
             <a className={`${classes.NavLink} ${this.props.router.pathname == '/skills' ? classes.selected : ''}`}  >Skills</a>
+        </Link>
+        <Link href="/projects">
+            <a className={`${classes.NavLink} ${this.props.router.pathname == '/projects' ? classes.selected : ''}`}  >Projects</a>
         </Link>
         <div className={classes.icons}>
               <a href="https://github.com/sylvain147" target="_blank">

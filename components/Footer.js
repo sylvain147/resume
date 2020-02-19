@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     display : 'flex',
     justifyContent : 'space-between',
     alignItems : 'center',
-    marginTop : '60px'
+    marginTop : '60px',
+    flexWrap : 'wrap',
   },
   title : {
   	fontWeight : 'bold',

@@ -21,11 +21,11 @@ const styles = theme => ({
     	color : '#5162ad'
   },
 })
-class Realisation extends React.Component {
+class Project extends React.Component {
 	constructor (props) {
 		super(props)
 		this.state = {
-			realisation : props.realisation,
+			project : props.project,
 			open : false
 		}
 	}
@@ -34,7 +34,7 @@ class Realisation extends React.Component {
 		this.setState({open : !lastState})
 	}
 	render () {
-		const real = this.state.realisation
+		const real = this.state.project
     	const { classes } = this.props;
 		return (
 		<div className={classes.tile} onClick={this.handleClick.bind(this)}>
@@ -69,7 +69,7 @@ class Realisation extends React.Component {
         		</div>
         		<div>
         			<div style={{marginTop : '10px'}}>
-        				{real.description}
+        				
         			</div>
 				</div>
 			</div>
@@ -77,4 +77,4 @@ class Realisation extends React.Component {
 		)
 	}
 }
-export default withStyles(styles)(Realisation)
+export default withStyles(styles)(Project)

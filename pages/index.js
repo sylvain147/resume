@@ -1,12 +1,13 @@
 import { withStyles } from '@material-ui/core/styles';
 import { FiChevronDown } from 'react-icons/fi';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const styles = theme => ({
   title : {
   	fontSize : '40px',
   	marginBottom : '20px',
     marginTop : '0',
-    textAlign : 'center'
+    textAlign : 'center',
 
   },
   description : {
@@ -50,7 +51,7 @@ class Index extends React.Component{
         Welcome to my online Resume
       </p>
       </div>
-      <div style={{height : this.state.open ? '270px' : '0px', overflow : 'hidden', transition : '500ms' }}>
+      <div style={{maxHeight : this.state.open ? '2700px' : '0px', overflow : 'hidden', transition : '500ms' }}>
       <div className={classes.description}>
       <p>
         I am a <span className={classes.important}> Web Developer
