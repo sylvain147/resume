@@ -17,7 +17,7 @@ function getEducation() {
       school : 'Université de lille', 
       date : '2018', 
       location: 'France' , 
-      description : 'Bachelor\'s degree in Computer Science'}
+      description : 'Bachelor\'s Degree in Computer Science'}
 
   ]
 }

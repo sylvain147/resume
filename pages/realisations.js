@@ -11,7 +11,7 @@ export default function Realisations() {
 	return (
 		<div style={{display : 'flex', justifyContent : 'space-between'}}>
 			<div className={classes.part}>
-				<h2>Personnal</h2>
+				<h2 style={{fontSize : '25px'}} >Personnal</h2>
 				<div>
 					{getPersonnals().map(realisation => (
          				 <Realisation key={realisation.id} realisation={realisation} />
@@ -19,7 +19,7 @@ export default function Realisations() {
         		</div>
 			</div>
 			<div className={classes.part}>
-				<h2>Professionnal</h2>
+				<h2 style={{fontSize : '25px'}}>Professionnal</h2>
 				<div>
 					{getProfessional().map(realisation => (
          				 <Realisation key={realisation.id} realisation={realisation} />

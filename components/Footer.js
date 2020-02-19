@@ -1,14 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Document, Page } from 'react-pdf';
 
 
 const useStyles = makeStyles({
   footer: {
     backgroundColor: '#5f5f5f',
     color : '#fff',
-    position : 'absolute',
+    position : 'fixed',
     left : '0',
     right : '0',
+    bottom : '0',
     padding : '20px 70px',
     display : 'flex',
     justifyContent : 'space-between',
@@ -53,11 +53,11 @@ export default function Footer() {
 						<span className={classes.label}> Phone :</span> +16463810919
 					</p>
 					<p style={{margin : '3px 0'}}>
-						<span className={classes.label}> Email :</span> <a href="mailto:sylvain.attoumani@gmail.com">sylvain.attoumani@gmail.com</a>
+						<span className={classes.label}> Email :</span> <a style={{color : '#fff'}} href="mailto:sylvain.attoumani@gmail.com">sylvain.attoumani@gmail.com</a>
 					</p>
 				</div>
 				<div>
-				<a href="/resume.pdf">
+				<a target='_blank' href="/resume.pdf">
 					<div className={classes.button}>
 						Download the resume
 					</div>

@@ -10,6 +10,7 @@ const styles = theme => ({
   },
   description : {
     margin : '0',
+    fontSize : '25px'
   },
   date : {
     margin : '0',

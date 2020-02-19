@@ -29,7 +29,6 @@ class Skill extends React.Component  {
 	render () {
 		const foo = Array.from(Array(5).keys())
 		const classes = this.props.classes
-		console.log(classes)
 
 		return (
 			<div>

@@ -25,14 +25,18 @@ const styles = theme => ({
 		padding : "0 15px 4px",
 		color : '#5f5f5f',
 		transition : '400ms',
-		selected : {
-			color : '#5162ad'
-		},
 		'&:hover' : {
 			color : '#5162ad',
 			padding : '0 38px 4px',
-			fontWeight : 'bold'
+			fontWeight : 'bold',
+			borderBottom : '2px solid'
 		},
+	},
+	selected : {
+		color : '#5162ad',
+			padding : '0 38px 4px',
+			fontWeight : 'bold',
+			borderBottom : '2px solid'
 	},
 	icons : {
 		position : 'absolute',
@@ -56,16 +60,16 @@ class Header extends React.Component {
 		<div>
       <div className={classes.navbar}>
       <Link href="/">
-            <a className={`${classes.NavLink} ${this.props.router.pathname == '/' ? classes.NavLink.selected : ''}`}  >Home</a>
+            <a className={`${classes.NavLink} ${this.props.router.pathname == '/' ? classes.selected : ''}`}  >Home</a>
         </Link>
         <Link href="/experiences">
-            <a className={`${classes.NavLink} ${this.props.router.pathname == '/experiences' ? classes.NavLink.selected : ''}`}  >Experience</a>
+            <a className={`${classes.NavLink} ${this.props.router.pathname == '/experiences' ? classes.selected : ''}`}  >Experience</a>
         </Link>
         <Link href="/education">
-            <a className={`${classes.NavLink} ${this.props.router.pathname == '/education' ? classes.NavLink.selected : ''}`}  >Education</a>
+            <a className={`${classes.NavLink} ${this.props.router.pathname == '/education' ? classes.selected : ''}`}  >Education</a>
         </Link>
         <Link href="/skills">
-            <a className={`${classes.NavLink} ${this.props.router.pathname == '/skills' ? classes.NavLink.selected : ''}`}  >Skills</a>
+            <a className={`${classes.NavLink} ${this.props.router.pathname == '/skills' ? classes.selected : ''}`}  >Skills</a>
         </Link>
         <div className={classes.icons}>
               <a href="https://github.com/sylvain147" target="_blank">
