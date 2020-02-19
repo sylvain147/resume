@@ -3,7 +3,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import { withRouter } from 'next/router'
 import { FaGithub } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const styles = theme => ({
   navbar : {
@@ -47,8 +47,9 @@ const styles = theme => ({
 		fontSize : '25px',
 		marginRight : '15px',
 		color :'#5f5f5f',
+		transition : '600ms',
 		'&:hover' : {
-			color :'#5162ad'
+			color :'#3489eb'
 		},
 
 	}
@@ -76,7 +77,7 @@ class Header extends React.Component {
         	<FaGithub className={classes.icon}/>
         	</a>	
         	<a href="https://www.linkedin.com/in/sylvain-attoumani-795549109/" target="_blank">
-        	<FaLinkedin className={classes.icon} />
+        	<FaLinkedinIn className={classes.icon} />
         	</a>
         </div>
       </div>

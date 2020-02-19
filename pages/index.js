@@ -23,26 +23,34 @@ class Index extends React.Component{
   constructor(props) {
     super(props)
     this.state = {
-      open : false
+      open : false,
+      title : false,
+      desc : false,
+      arrow : false
     }
   }
  showDescription() {
     const currentState = this.state.open;
     this.setState({ open: !currentState }); 
   }
+
   render () {
     const { classes } = this.props;
+    setTimeout(() => { this.setState({title : true}) }, 100);
+    setTimeout(() => { this.setState({desc: true}) }, 600);
+    setTimeout(() => { this.setState({arrow : true}) }, 900);
+
      return (
     <div>
       <div className={classes.title}>
-      <p style={{margin : '0'}}>
+      <p style={{margin : this.state.title ? '0' : '0 0 0 -10000px', transition : '1200ms ease-out'}}>
           Hello, I am Sylvain Attoumani
       </p>
-      <p style={{margin : '0'}}>
+      <p style={{margin : this.state.desc ? '0' : '0 0 0 -10000px', transition : '1200ms ease-out'}}>
         Welcome to my online Resume
       </p>
       </div>
-      <div style={{height : this.state.open ? '240px' : '0px', overflow : 'hidden', transition : '500ms' }}>
+      <div style={{height : this.state.open ? '270px' : '0px', overflow : 'hidden', transition : '500ms' }}>
       <div className={classes.description}>
       <p>
         I am a <span className={classes.important}> Web Developer
@@ -61,8 +69,8 @@ class Index extends React.Component{
       </p>
       </div>
     </div>
-    <p style={{textAlign : 'center'}}>
-    <FiChevronDown style={{fontSize : '50px', cursor : 'pointer' , color : '#5162ad', transform : this.state.open ? 'rotate(180deg)' : 'rotate(0deg)', transition : '300ms'}}  onClick={this.showDescription.bind(this)}/>
+    <p style={{textAlign : 'center', maxHeight : '60px', overflow : 'hidden'}}>
+    <FiChevronDown style={{fontSize : '50px', cursor : 'pointer' , color : '#5162ad', transform : this.state.open ? 'rotate(180deg)' : 'rotate(0deg)', transition : 'rotate 300ms, margin 1200ms ease-out', margin : this.state.arrow ? '0' : '0 0 -1000px 0'}}  onClick={this.showDescription.bind(this)}/>
     </p>
     </div>
     )
